@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Balanças</title>
+    <!-- fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300..700&display=swap" rel="stylesheet">
+    <!-- icones -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
+    <!-- css -->
+    <link rel="Stylesheet" href="./css/index.css" />
+</head>
+<body>
+    <div id="app">
+        <header class="header">
+            <div class="fields">
+                <div class="select">
+                    <label for="model">
+                        <i class="fas fa-file-alt"></i>
+                    </label>
+                    <select id="model">
+                        <option>Modelos</option>
+                        <option value="peso-Exato">Peso Exato</option>
+                        <option value="libratek">Libratek</option>
+                        <option value="alfa">Alfa</option>
+                    </select>
+                </div>
+                <div class="select status">
+                    <label for="status"><i class="fas fa-circle-check"></i></label>
+                    <select id="status">
+                        <option>Status</option>
+                        <option value="ativo">Ativo</option>
+                        <option value="manutencao">Manutenção</option>
+                        <option value="desativado">Desativado</option>
+                    </select>
+                </div>
+            </div>          
+        </header>
+        <main>
+            <section id="search">
+                <form>
+                    <div class="field-wrapper">
+                        <label for="bal"><i class="fas fa-search"></i></label>
+                        <input type="text" id="bal" placeholder="Pesquise a balança" autocomplete="off" required />
+                    </div>
+                    <button>Buscar</button>
+                </form>
+            </section>
+            <section id="s-balance">
+                <h2>Balanças</h2>
+                <div id="balan">
+                    <div class="bal"></div>
+                    <div class="bal"></div>
+                </div>
+            </section>
+        </main>
+    </div>
+
+    <!-- scripts -->
+    <script src="index.js"></script>
+</body>
+</html>

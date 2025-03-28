@@ -1,0 +1,139 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-synthesis: none;
+    text-rendering: optimizeLegibility;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    -webkit-text-size-adjust: 100%;
+}
+:root {
+    font-size: 62.5%;
+    font-family: 'Space Grotesk', arial, helvetica, sans-serif;
+    --border: 1px solid #262629;
+    --cor: #09090B;
+}
+button:hover {
+    cursor: pointer;
+}
+a {
+    text-decoration: none;
+    color: white;
+}
+select, button, input {
+    all: unset;
+}
+select {
+    width: 100%;
+}
+ul li {
+    list-style: none;
+}
+i {
+    color: #46464C;
+}
+input {
+    width: 100%;
+}
+body {
+    font-size: 1.6rem;
+}
+html, input, select, button, option {
+    font-family: 'Space grotesk', sans-serif;
+    background-color: #09090B;
+    color: #FAFAFA;
+}
+#app {
+    max-width: 33rem;
+    margin: auto;
+    padding: 5rem 2rem;
+}
+.header {
+    margin-bottom: 5rem;
+}
+.fields {
+    display: grid;
+    gap: 2.5rem;
+}
+.select {
+    background-color: #09090B;
+    padding: 18px;
+    border: var(--border);
+    border-radius: 1rem;
+    display: flex;
+    align-items: center;
+    gap: .8rem;
+    color: white;
+    font-size: 1.7rem;
+}
+.select:focus-within {
+    outline: 2px solid yellowgreen;
+}
+
+/* main */
+form {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: .8rem;
+    border: var(--border);
+    border-radius: 1rem;
+    padding: 1.8rem;
+}
+.field-wrapper {
+    display: flex;
+    align-items: center;
+    gap: .8rem;
+}
+form button {
+    background-color: #AFF445;
+    padding: .5rem .8rem;
+    border-radius: .5rem;
+    color: #132F00;
+    font-weight: 500;
+}
+
+#s-balance {
+    margin-top: 4rem;
+}
+/* media queries */
+@media screen and (min-width: 800px) {
+    
+    #app {
+        margin-top: 3rem;
+        max-width: 90rem;
+        display: flex;
+        justify-content: space-evenly;
+        
+    }
+    header {
+        max-width: 19rem;
+    }
+    main {
+        width: 40rem;
+    }
+    #balan {
+        display: flex;
+        gap: 2rem;
+    }
+    .bal {
+        flex-basis: 16rem;
+        height: 15rem;
+        background: green;
+    }
+}
+@media screen and (min-width: 900px) {
+    #app {
+        max-width: 100rem;
+    }
+    main {
+        width: 50rem;
+    }
+    form button {
+        padding: .5rem 1.5rem;
+    }
+    header {
+        width: 30rem;
+    }
+}
