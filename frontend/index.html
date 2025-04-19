@@ -28,13 +28,13 @@
     <div id="app">
         <header class="header">
             <div class="title">
-                <h2>Balanças</h2>
+                <h2>PESA 🐔RANGO</h2>
             </div>
             <div class="menu">
-                <button>
+                <button class="open">
                     <i class="ph ph-text-indent"></i>
                 </button>
-                <button>
+                <button class="close">
                     <i class="ph ph-x"></i>
                 </button>
             </div>
@@ -44,7 +44,7 @@
                         <i class="fas fa-file-alt"></i>
                     </label>
                     <select id="model">
-                        <option>Modelos</option>
+                        <option value="">Modelos</option>
                         <option value="peso-Exato">Peso Exato</option>
                         <option value="libratek">Libratek</option>
                         <option value="alfa">Alfa</option>
@@ -62,25 +62,57 @@
             </div>          
         </header>
         <main>
-            <section id="search">
+            <section class="search">
                 <form>
                     <div class="field-wrapper">
                         <label for="bal"><i class="fas fa-search"></i></label>
-                        <input type="text" id="bal" placeholder="Pesquise a balança" autocomplete="off" required />
+                        <input type="text" id="bal" placeholder="Buscar balança" autocomplete="off" required />
                     </div>
                     <button>Buscar</button>
                 </form>
             </section>
             <section id="s-balance">
-                <div id="balan">
-                    <div class="bal"></div>
-                    <div class="bal"></div>
+                <div class="balance">
+                    <h3 class="balance__title">Alfa 35</h3>
+                    <p>
+                        <span>
+                            <i class="fas fa-tag"></i>
+                            Modelo: 3101
+                        </span>
+                        <span>
+                            <i class="fas fa-hashtag"></i>
+                            Série: 333994
+                        </span>
+                    </p>
+                    <p>
+                        <span>
+                            <i class="fas fa-file"></i>
+                            Certificado: 3334455
+                        </span>
+                    </p>
+                    <p>
+                        <span>
+                            <i class="fas fa-weight-scale"></i>
+
+                            Capacidade: 50 KG
+                        </span>
+                        <span>
+                            <i class="fas fa-divide"></i>
+                            Divisão: 5 G
+                        </span>
+                    </p>
+                    <p>
+                        <span>
+                            <i class="fas fa-calendar"></i>
+                            Data de Calibração: 04/12/24
+                        </span>
+                    </p>
                 </div>
             </section>
         </main>
     </div>
 
     <!-- scripts -->
-    <script src="index.js"></script>
+    <script src="styles.js"></script>
 </body>
 </html>

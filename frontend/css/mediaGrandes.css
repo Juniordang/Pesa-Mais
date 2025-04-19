@@ -1,0 +1,52 @@
+@media screen and (min-width: 450px) {
+    div#app {
+        width: 40rem;
+        padding-left: 0;
+        padding-right: 0;
+    }
+}
+@media screen and (min-width: 651px) {
+    
+    div#app {
+        width: 55rem;
+        height: 84vh;
+        margin: 3rem auto;
+        display: grid;
+        justify-content: space-around;
+        grid-template-columns: 1.8fr 3fr;
+        grid-auto-rows: auto;
+        column-gap: 8rem;
+    }
+    div.title {
+        text-align: left;
+        align-self: center;
+    }
+    div.title > h2 {
+        font-size: 2.2rem;
+        text-align: center;
+
+    }
+    div.menu {
+        display: none;
+    }
+    div.fields {
+        display: flex;
+        flex-direction: column;
+        margin-top: 4rem;
+    }
+    main {
+        /* width: fit-content; */
+    }
+    section.search {
+        display: block;
+    }
+}
+
+@media screen and (min-width: 900px) {
+    div#app {
+        width: 70rem;
+        grid-template-columns: 1.8fr 4fr;
+        
+    }
+
+}
