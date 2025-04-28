@@ -45,8 +45,6 @@ html, input, select, button, option {
     background-color: #09090B;
     color: #FAFAFA;
 }
-/* none, block e flex */
-
 #app {
     width: 33rem;
     margin: auto;
@@ -63,15 +61,13 @@ html, input, select, button, option {
 .close {
     display: none;
 }
-.open {
-    display: block;
-}
+
 /* menu */
 .menu {
-    padding: 2rem 0;
+    padding: 2rem 0 1.5rem;
 }
 .menu button {
-    font-size: 2.8rem;
+    font-size: 2.5rem;
     font-weight: bold;
 }
 button i {
@@ -81,27 +77,66 @@ button i {
 .fields {
     display: flex;
     gap: 2.5rem;
-}
-.fields select > option {
-    font-size: 1.7rem;
-}
-.select {
+    flex-wrap: wrap;
+  }
+  
+  .select {
     background-color: #09090B;
-    padding: 18px;
+    padding: 1.2rem 1.5rem;
     border: var(--border);
     border-radius: 1rem;
     display: flex;
     align-items: center;
-    gap: .8rem;
+    gap: 0.8rem;
     color: white;
-    font-size: 1.7rem;
+    font-size: 1.6rem;
     width: 100%;
     white-space: nowrap;
-}
-.select:focus-within {
-    outline: 2px solid yellowgreen;
-}
-
+    transition: all 0.2s ease-in-out;
+    position: relative;
+  }
+  
+  .select:focus-within {
+    outline: 2px solid #3b82f6;
+    box-shadow: 0 0 0 3px rgba(59, 130, 246, 0.3);
+  }
+  
+  .select label {
+    color: #3b82f6;
+    font-size: 1.5rem;
+    display: flex;
+    align-items: center;
+  }
+  
+  .select select {
+    background: transparent;
+    border: none;
+    color: white;
+    font-size: 1.5rem;
+    font-family: inherit;
+    width: 100%;
+    outline: none;
+    appearance: none; 
+    cursor: pointer;
+    padding-right: 2.5rem;
+  }
+  
+  .select select > option {
+    background-color: #09090B;
+    color: #e4e4e7;
+    font-size: 1.5rem;
+  }
+  .select::after {
+    content: '';
+    position: absolute;
+    right: 15px;
+    top: 50%;
+    transform: translateY(-50%);
+    border-left: 6px solid transparent;
+    border-right: 6px solid transparent;
+    border-top: 6px solid #e4e4e7;
+  }
+  
 /* main */
 main {
     transition: width 0.5s ease;
@@ -117,6 +152,10 @@ form {
     border: var(--border);
     border-radius: 1rem;
     padding: 1.8rem;
+    transition: border-color 0.3s ease;
+}
+.field-wrapper {
+    flex-grow: 1; 
 }
 .field-wrapper {
     display: flex;
@@ -124,16 +163,23 @@ form {
     gap: .8rem;
 }
 form button {
-    background-color: #AFF445;
+    background-color: #4c6ef5;  
     padding: .5rem .8rem;
     border-radius: .5rem;
-    color: #132F00;
+    color: white; 
     font-weight: 500;
+    cursor: pointer;
+    transition: background-color 0.3s ease;  
 }
 
-#s-balance {
-    margin-top: 4rem;
+form button:hover {
+    background-color: #365ac6; 
 }
+
+form:focus-within {
+    border-color: #86a7e7; 
+}
+
 .none {
     display: none;
 }
@@ -145,3 +191,57 @@ form button {
 }
 
 /* seção balanças */
+#s-balance {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    row-gap: 2.5rem;
+    margin-top: 7rem;
+}
+.balance {
+    border-radius: 1rem;
+    background: #141414;
+    padding: 1rem 1rem 2rem;
+    font-family: "Dm sans",arial, helvetica,sans-serif;
+    width: 27rem;
+}
+.balance .top {
+    padding: 1rem;
+    text-align: center;
+}
+.balance .body {
+    background: #0A0A0A;
+    border: 1px solid #101010;
+    border-radius: .8rem;
+    padding: 1rem;
+}
+.balance .body p {
+    display: flex;
+    align-items: center;
+    gap: 0.6rem;
+    font-size: 1.5rem;
+    font-weight: 500;
+    color: #e4e4e7;
+    margin: 0.75rem 0;
+  }
+  
+  .balance .body i {
+    color: #3b82f6; /* Azul suave, destaque nos ícones */
+    font-size: 1.6rem;
+    min-width: 20px;
+  }
+  
+  .balance .body span {
+    color: #9ca3af; /* Cinza claro para info secundária */
+    font-weight: 400;
+  }
+  .balance .body p:hover {
+    background: #181818;
+    border-radius: 0.6rem;
+    padding: 0.6rem 0.8rem;
+    transition: background 0.2s ease, padding 0.2s ease;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
+  }
+  
+  

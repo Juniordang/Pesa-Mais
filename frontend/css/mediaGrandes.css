@@ -1,6 +1,6 @@
 @media screen and (min-width: 450px) {
     div#app {
-        width: 40rem;
+        width: 28rem;
         padding-left: 0;
         padding-right: 0;
     }
@@ -13,7 +13,7 @@
         margin: 3rem auto;
         display: grid;
         justify-content: space-around;
-        grid-template-columns: 1.8fr 3fr;
+        grid-template-columns: auto 6fr;
         grid-auto-rows: auto;
         column-gap: 8rem;
     }
@@ -26,16 +26,13 @@
         text-align: center;
 
     }
-    div.menu {
+    /* div.menu {
         display: none;
-    }
+    } */
     div.fields {
         display: flex;
         flex-direction: column;
         margin-top: 4rem;
-    }
-    main {
-        /* width: fit-content; */
     }
     section.search {
         display: block;
@@ -44,9 +41,14 @@
 
 @media screen and (min-width: 900px) {
     div#app {
-        width: 70rem;
-        grid-template-columns: 1.8fr 4fr;
-        
+        width: 85rem;
+        grid-template-columns: 2fr 7fr;
     }
+    section#s-balance {
+        width: 100%;
+        flex-direction: row;
+        flex-wrap: wrap;           
+        gap: 2.5rem;          
+      }
 
 }

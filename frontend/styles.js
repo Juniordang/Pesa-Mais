@@ -4,44 +4,35 @@ const open = document.querySelector(".open");
 const close = document.querySelector('.close');
 const icon = document.querySelector(".fa-circle-check")
 const select = document.querySelector("#status");
+const menu = document.querySelector(".menu");
 select.addEventListener("change", (e) => {
-    switch (e.target.value) {
-        case "ativo":
-            icon.style.color = "#75E18A";
-            break;
-        case "manutencao":
-            icon.style.color = "#E0590D";
-            break;
-        case "desativado":
-            icon.style.color = "#E0180D"
-            break;
-    }
+    colorSelect(e.target.value);
 })
-
-const isMobile = window.matchMedia("(max-width: 650px)")
-open.addEventListener("click", () => {
+function colorSelect(status) {
+    const color = {
+        ativo: "#75E18A",
+        manutencao: "#E0590D",
+        desativado: "#E0180D"
+    }
+    return icon.style.color = color[status];
+}
+const isMobile = window.matchMedia("(max-width: 649px)")
+open.addEventListener("click", () => menuStyle('add'))
+close.addEventListener("click", () => menuStyle('remove'))
+function menuStyle(type) {
     if (isMobile.matches) {
-        fields.classList.add("none");
-        search.classList.add("block");
-        open.classList.remove("block");
-        open.classList.add("none");
-        close.classList.add("block");
+        fields.classList[type]("none");
+        search.classList[type]("block");
+        open.classList[type]("none");
+        close.classList[type]("block");
     }
-
-})
-close.addEventListener("click", () => {
-    if (isMobile.matches) {
-        fields.classList.remove("none");
-        search.classList.remove("block");
-        open.classList.remove("none");
-        close.classList.remove("block");
-    }
-})
+}
 isMobile.addEventListener("change", e => {
-    if (!e.matches) {
-        open.classList.add("none");
-        close.classList.add("none");
-    } else {
+    if (e.matches) {
+        console.log("none")
+        menu.classList.remove("none");
         open.classList.add("block");
-    }
+        return;
+    } 
+    menu.classList.add("none");
 })
