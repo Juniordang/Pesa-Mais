@@ -8,141 +8,92 @@
     <!-- fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&family=Space+Grotesk:wght@300..700&display=swap" rel="stylesheet">
-    <!-- icones -->
-    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
-    <link
-      rel="stylesheet"
-      type="text/css"
-      href="https://cdn.jsdelivr.net/npm/@phosphor-icons/web@2.1.1/src/regular/style.css"
-    />
-    <link
-      rel="stylesheet"
-      type="text/css"
-      href="https://cdn.jsdelivr.net/npm/@phosphor-icons/web@2.1.1/src/fill/style.css"
-    />
+    <link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Space+Grotesk:wght@300..700&display=swap" rel="stylesheet">
     <!-- css -->
     <link rel="Stylesheet" href="./css/index.css" />
 </head>
 <body>
     <div id="app">
-        <header class="header">
-            <div class="title">
-                <h2>PESA 🐔RANGO</h2>
+        <header id="header">
+            <div class="top">
+                <div id="logo">
+                    <h2>
+                        Pesa <i data-lucide="drumstick"></i>rango
+                    </h2>
+                </div>
+                <div class="top_btn">
+                    <button class="btn_menu">
+                        <i data-lucide="menu"></i>
+                        Menu
+                    </button>
+                    <button>Voltar ao topo</button>
+                </div>
             </div>
-            <div class="menu">
-                <button class="open">
-                    <i class="ph ph-text-indent"></i>
-                </button>
-                <button class="close">
-                    <i class="ph ph-x"></i>
-                </button>
-            </div>
-            <div class="fields">
+            <div id="menu">
+                <div id="close">
+                    <input type="checkbox" value="close" id="close_menu" checked>
+                    <i data-lucide="x"></i>
+                </div>
                 <div class="select">
-                    <label for="model">
-                        <i class="fas fa-file-alt"></i>
-                    </label>
-                    <select id="model">
-                        <option value="">Modelos</option>
-                        <option value="peso-Exato">Peso Exato</option>
-                        <option value="libratek">Libratek</option>
-                        <option value="alfa">Alfa</option>
-                    </select>
-                </div>
-                <div class="select status">
-                    <label for="status"><i class="fas fa-circle-check"></i></label>
-                    <select id="status">
-                        <option>Status</option>
-                        <option value="ativo">Ativo</option>
-                        <option value="manutencao">Manutenção</option>
-                        <option value="desativado">Desativado</option>
-                    </select>
-                </div>
-            </div>          
-        </header>
-        <main>
-            <section class="search">
-                <form>
-                    <div class="field-wrapper">
-                        <label for="bal"><i class="fas fa-search"></i></label>
-                        <input type="text" id="bal" placeholder="Buscar balança" autocomplete="off" required />
+                    <div id="category_select">
+                        <label for="options_views_button">Categoria</label>
+                        <input type="checkbox" id="options_views_button">
+                        <div id="select_button">
+                            <div id="selected_value">Seleciona uma categoria</div>
+                            <div id="chevrons">
+                                <i data-lucide="chevron-down"></i>
+                                <i data-lucide="chevron-up"></i>
+                            </div>
+                        </div>
                     </div>
-                    <button>Buscar</button>
+                    <ul id="options">
+                        <li id="option">
+                            <input type="radio" name="category" value="peso-exato" data-label="Peso exato"/>
+                            <i data-lucide="tags"></i>
+                            <span class="label">Peso exato</span>
+                            <i data-lucide="check"></i>
+                        </li>
+                        <li id="option">
+                            <input type="radio" name="category" value="Libratek" data-label="Libratek"/>
+                            <i data-lucide="tags"></i>
+                            <span class="label">Libratek</span>
+                            <i data-lucide="check"></i>
+                        </li>
+                        <li id="option">
+                            <input type="radio" name="category" value="Toledo" data-label="Toledo"/>
+                            <i data-lucide="tags"></i>
+                            <span class="label">Toledo</span>
+                            <i data-lucide="check"></i>
+                        </li>
+                        <li id="option">
+                            <input type="radio" name="category" value="Alfa" data-label="Alfa"/>
+                            <i data-lucide="tags"></i>
+                            <span class="label">Alfa</span>
+                            <i data-lucide="check"></i>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </header> 
+        <main>
+            <section class="balance">
+                <form action="" method="post">
+                    <div class="wrapper">
+                        <div class="search">
+                            <i data-lucide="search"></i>
+                            <input type="text" id="search_balance" placeholder="Digite o Id" />
+                        </div>
+                        <button class="btn_search">Buscar</button>
+                    </div>
                 </form>
             </section>
-            <section id="s-balance">
-                <div class="balance">
-                    <div class="top">
-                        <h3 class="balance__title">Alfa 35</h3>
-                    </div>
-                    <div class="body">
-                        <p>
-                            <i class="fas fa-tag"></i>
-                            Modelo: 3101
-                        </p>
-                        <p>
-                            <i class="fas fa-hashtag"></i>
-                            Série: 333994
-                        </p>
-                        <p>
-                            <i class="fas fa-file"></i>
-                            Certificado: 3334455
-                        </p>
-                        <p>
-                            <i class="fas fa-weight-scale"></i>
-                            Capacidade: 50 KG
-                        </p>
-                        <p>
-                            <i class="fas fa-divide"></i>
-                            Divisão: 5 G
-                        </p>
-                        <p>
-                            <span>
-                                <i class="fas fa-calendar"></i>
-                                Data de Calibração: 04/12/24
-                            </span>
-                        </p>
-                    </div>
-                </div>
-                <div class="balance">
-                    <div class="top">
-                        <h3 class="balance__title">Alfa 35</h3>
-                    </div>
-                    <div class="body">
-                        <p>
-                            <i class="fas fa-tag"></i>
-                            Modelo: 3101
-                        </p>
-                        <p>
-                            <i class="fas fa-hashtag"></i>
-                            Série: 333994
-                        </p>
-                        <p>
-                            <i class="fas fa-file"></i>
-                            Certificado: 3334455
-                        </p>
-                        <p>
-                            <i class="fas fa-weight-scale"></i>
-                            Capacidade: 50 KG
-                        </p>
-                        <p>
-                            <i class="fas fa-divide"></i>
-                            Divisão: 5 G
-                        </p>
-                        <p>
-                            <span>
-                                <i class="fas fa-calendar"></i>
-                                Data de Calibração: 04/12/24
-                            </span>
-                        </p>
-                    </div>
-                </div>
-            </section>
         </main>
+
     </div>
+    
 
     <!-- scripts -->
-    <script src="styles.js"></script>
+    <script src="https://unpkg.com/lucide@latest"></script>
+    <script src="script.js"></script>
 </body>
 </html>
