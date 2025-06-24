@@ -1,5 +1,5 @@
 import { Balance } from "../model/balanceModel.js";
-import balanceJson from "../../data/parsePlanilha.js"
+import balanceJson from "../database/parsePlanilha.js"
 
 async function addAll() {
     try {

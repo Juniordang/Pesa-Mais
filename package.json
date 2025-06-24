@@ -5,8 +5,7 @@
   "type": "module",
   "scripts": {
     "start": "nodemon server.js",
-    "dev": "node server.js",
-    "test": "node data/parsePlanilha.js"
+    "dev": "node server.js"
   },
   "keywords": [],
   "author": "",
