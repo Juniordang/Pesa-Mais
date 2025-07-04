@@ -1,0 +1,28 @@
+<header class="text-dm">
+    <nav class="navbar bg-dark navbar-dark">
+        <div class="container">
+            <a href="#" class="navbar-brand d-flex align-items-center gap-1 fw-bolder text-dm">
+                PesaMais
+            </a>
+            <button class="btn btn-success btn-sm fw-bold" data-bs-toggle="offcanvas" data-bs-target="#menuLateral">Modelos</button>
+            <div class="offcanvas offcanvas-start" tabindex="-1" id="menuLateral">
+                <div class="offcanvas-header border-bottom border-1">
+                    <h5 class="offcanvas-title">Modelos</h5>
+                    <button class="btn-close" data-bs-dismiss="offcanvas"></button>
+                </div>
+                <div class="offcanvas-body">
+                    <form hx-get="#" class="row gap-3 px-2">
+                        <select class="form-select col rounded-2">
+                            <option selected>Escolha um modelo</option>
+                            <option value="peso_exato">Peso Exato</option>
+                            <option value="alfa">Alfa</option>
+                            <option value="toledo">Toledo</option>
+                            <option value="Libratek">Libratek</option>
+                        </select>
+                        <button class="col-4 btn btn-info">Buscar</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </nav>
+</header>
